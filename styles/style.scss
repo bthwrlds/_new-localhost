@@ -1,0 +1,187 @@
+// define mixins
+@function pxtorem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
+// breakpoints
+$breakpoints: (
+  small: 420px,
+  medium: 769px,
+  large: 1025px,
+  xlarge: 1241px
+);
+
+@mixin breakpoint ($breakpoint, $direction) {
+  //Get breakpoint value.
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @if $direction == max {
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content
+    }
+  }
+};
+
+// start styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  ol,
+  ul {
+    list-style-type: none;
+  }
+
+  .sr-only {
+    visibility: hidden;
+  }
+}
+
+// general styles------------------------------------
+body {
+  padding: pxtorem(5);
+  font-family: monospace; //TODO
+}
+header {
+  position: relative;
+  width: 100%;
+  //TODO: Add font-family
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    position: fixed;
+    font-weight: lighter;
+  }
+}
+// specific styles------------------------------------
+.hero__message {
+  font-size: pxtorem(100);
+  white-space: nowrap;
+  color: lightpink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+
+  @include breakpoint (medium, max) {
+    font-size: pxtorem(70);
+  }
+}
+
+main {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  background-attachment: fixed;
+
+  @media screen and(max-width: 767px) {
+    display: block;
+    background-size: 100%;
+  }
+}
+
+  .hero__image {
+    text-align: center;
+    margin: auto;
+     //TODO: kleinere image varianten
+
+     @include breakpoint (medium, max) {
+       width: pxtorem(400);
+     }
+
+    @include breakpoint (small, max) {
+      width: pxtorem(300);
+      
+    }
+  }
+
+  section {
+  width: 100%;
+  margin: auto;
+  padding: 50px;
+
+  @include breakpoint (medium, max) {
+    padding: 0;
+  }
+}
+
+.text {
+  height: 100vh;
+  max-width: 70%;
+  margin: pxtorem(20) auto;
+
+  p {
+    display: inline-block;
+    font-size: pxtorem(20);
+    padding-bottom: pxtorem(20);
+
+    @include breakpoint (medium, max){
+      padding-bottom: pxtorem(20);
+      font-size: pxtorem(18);
+    }
+
+    &:last-of-type {
+      @include breakpoint (medium, max) {
+        padding-bottom: pxtorem(50);
+      }
+
+      @include breakpoint (small, max) {
+      padding-bottom: pxtorem(100);
+      }
+    }
+
+
+    &::selection {
+      color: yellow;
+      background-color: blue;
+    }
+  }
+
+
+
+  // flowers
+  .flower__left, .flower__right {
+    max-width: 650px;
+    position: fixed;
+    bottom: 20%;
+
+    @include breakpoint (large, max) {
+      max-width: pxtorem(550);
+    }
+  }
+
+  //flower right
+  .flower__right, .flower__top {
+    // background-color: green;
+    right: 5%;
+    transform: rotateY(180deg);
+
+    @include breakpoint (medium, max) {
+      bottom: 0;
+      left: -5%;
+      width: pxtorem(400);
+      z-index: -1;
+    }
+  }
+
+  // flower left
+  .flower__left, .flower__bottom {
+    left: 5%;
+
+    @include breakpoint (medium, max) {
+      width: 50%;
+      right: -5%;
+      left: auto;
+      top: 20%;
+      z-index: -1; 
+    }
+  }
+} 
+
