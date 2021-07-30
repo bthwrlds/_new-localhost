@@ -1,5 +1,4 @@
-//hero message
-
+// hero message
 const hireMe = document.querySelector('.hero__message');
 const itsMe = document.querySelector('.hero-image');
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="mainnav">
+            <ul class="mainnav">
+                <li class="mainnav__list-item">
+                    <a href="#" role="menuitem">my cv</a>
+                </li>
+                <li class="mainnav__list-item">
+                    <a href="projects.html" role="menuitem">my projects</a>
+                </li>
+                <li>
+                    <a class="flower__off" role="button">disable flower</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="flower__background">
+        <img src='img/blume.png'>
+    </div>
+
+
+</body>
+<script>
+
+    // disable flower
+    const flowerOff = document.querySelector('.flower__off');
+    const flowerBackground = document.querySelector('.flower__background');
+
+    flowerOff.addEventListener('click', function () {
+
+        if (flowerBackground.style.visibility = 'hidden') {
+            flowerBackground.setAttribute('style', 'visibility: visible;')
+        } else {
+            flowerBackground.setAttribute('style', 'visibility: hidden;')
+            console.log('Its ok, I get dizzy, too.')
+        }
+    })
+</script>
+
+</html>

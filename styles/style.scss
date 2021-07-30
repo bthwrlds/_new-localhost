@@ -52,14 +52,19 @@ header {
 
   a {
     text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   ul {
     position: fixed;
     font-weight: lighter;
+    color: blue;
   }
 }
-// specific styles------------------------------------
+// specific styles index.html ------------------------------------
 .hero__message {
   font-size: pxtorem(100);
   white-space: nowrap;
@@ -184,4 +189,30 @@ main {
     }
   }
 } 
+
+// styles projects.html
+.flower__background {
+  margin-top: pxtorem(100);
+  z-index: -2;
+
+  animation: rotation 8s infinite linear;
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotateY(359deg);
+    }
+  }
+
+  img {
+    transform: rotate(60deg);
+    position: absolute;
+    top: pxtorem(200);
+    
+  }
+}
+
+
+
 
