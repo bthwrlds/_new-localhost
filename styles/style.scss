@@ -146,23 +146,23 @@ main {
       font-size: pxtorem(18);
     }
 
-    &:last-of-type {
-      @include breakpoint (medium, max) {
-        padding-bottom: pxtorem(50);
-      }
-
-      @include breakpoint (small, max) {
-      padding-bottom: pxtorem(100);
-      }
-    }
-
-
     &::selection {
       color: yellow;
       background-color: blue;
     }
   }
 
+  .main__intro p:last-of-type {
+    margin-bottom: pxtorem(450);
+
+    @include breakpoint (medium, max) {
+      padding-bottom: pxtorem(300);
+    }
+
+    @include breakpoint (small, max) {
+    padding-bottom: pxtorem(300);
+    }
+  }
 
 
   // flowers
@@ -221,9 +221,11 @@ main {
   }
 
   img {
+    height:200px;
     transform: rotate(60deg);
     position: absolute;
     top: pxtorem(200);
+    left: 0%;
     
   }
 }
@@ -237,6 +239,9 @@ main {
 .projects__overview {
   h2 {
     margin-bottom: pxtorem(10);
+  }
+  p.projects__intro {
+    padding-bottom: pxtorem(20);
   }
 }
 
