@@ -270,6 +270,10 @@ section {
   padding-bottom: 1.25rem;
 }
 
+.projects__list {
+  font-size: larger;
+}
+
 details[open] {
   padding-bottom: 0.3125rem;
 }
@@ -280,7 +284,7 @@ details[open] summary {
 }
 
 details[open] a {
-  display: inline-block;
+  display: block;
 }
 
 main#cv .text.cv__overview {
