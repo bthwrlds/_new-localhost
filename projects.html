@@ -15,13 +15,17 @@
         <nav class="mainnav">
             <ul class="mainnav">
                 <li class="mainnav__list-item">
+                    <a href="index.html" role="menuitem">home</a>
+                </li>
+                <li class="mainnav__list-item">
                     <a href="#" role="menuitem">my cv</a>
                 </li>
                 <li class="mainnav__list-item">
                     <a href="projects.html" role="menuitem">my projects</a>
                 </li>
                 <li>
-                    <a class="flower__off" role="button">disable flower</a>
+                    <button class="flower__off " role="menuitem">disable flower</button>
+                    <!--TODO: Button -->
                 </li>
             </ul>
         </nav>
@@ -29,24 +33,46 @@
     <div class="flower__background">
         <img src='img/blume.png'>
     </div>
+    <section class="text projects__overview">
+        <h2>Here you can find some projects I have completed so far</h2>
+        <p class="projects__intro">
+            I started writing html and css in fall 2020. I had several tasks to complete for school, leading to finish
+            two projects.
+        </p>
+        <div class="projects__list">
+            <details>
+                <summary>second semester: responsive website</summary>
+                This page was the result of finishing first semester.
+                The task was to provide a responsive webpage with a consistent and clear layout. After finishing this
+                project I decided to redesign my first screendesign and implemented the 'de-ugliefier'-button as a way
+                to showcase a more simplistic look.
+                <a href="portfolio/responsive-page/index.html" target="_blank">You can check it out here.</a>
+            </details>
+            <details>
+                <summary>first semester: optician homepage</summary>
+                Our task here was to design and write code for a homepage of a fictional opticion, including
+                screendesign and mockups (which you can find attached in the files of this website).
+                The main learning for me here was implementing the 'sight test' on the landing page as a table filled
+                with images.
+                <a href="portfolio/04_optiker_Tack/index.html" target="_blank">You can check it out here.</a>
+            </details>
+        </div>
+
+    </section>
 
 
 </body>
 <script>
 
     // disable flower
-    // const flowerOff = document.querySelector('.flower__off');
-    // const flowerBackground = document.querySelector('.flower__background');
+    const flowerOff = document.querySelector('.flower__off');
+    const flowerBackground = document.querySelector('.flower__background');
 
-    // flowerOff.addEventListener('click', function () {
+    flowerOff.addEventListener('click', function () {
 
-    //     if (flowerBackground.) {
-    //         flowerBackground.setAttribute('style', 'visibility: visible;')
-    //     } else {
-    //         flowerBackground.setAttribute('style', 'visibility: hidden;')
-    //         console.log('Its ok, I get dizzy, too.')
-    //     }
-    // })
+        flowerBackground.classList.toggle('is-hidden');
+        console.log('Visibility');
+    })
 </script>
 
 </html>

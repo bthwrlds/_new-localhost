@@ -33,10 +33,21 @@ header a:hover {
   cursor: pointer;
 }
 
+header a :visited {
+  color: blue;
+}
+
 header ul {
   position: fixed;
   font-weight: lighter;
   color: blue;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
 }
 
 .hero__message {
@@ -106,37 +117,37 @@ section {
   margin: 1.25rem auto;
 }
 
-.text p {
+.text p, .text .projects__intro {
   display: inline-block;
   font-size: 1.25rem;
   padding-bottom: 1.25rem;
 }
 
 @media (max-width: 768px) {
-  .text p {
+  .text p, .text .projects__intro {
     padding-bottom: 1.25rem;
     font-size: 1.125rem;
   }
 }
 
 @media (max-width: 768px) {
-  .text p:last-of-type {
+  .text p:last-of-type, .text .projects__intro:last-of-type {
     padding-bottom: 3.125rem;
   }
 }
 
 @media (max-width: 419px) {
-  .text p:last-of-type {
+  .text p:last-of-type, .text .projects__intro:last-of-type {
     padding-bottom: 6.25rem;
   }
 }
 
-.text p::-moz-selection {
+.text p::-moz-selection, .text .projects__intro::-moz-selection {
   color: yellow;
   background-color: blue;
 }
 
-.text p::selection {
+.text p::selection, .text .projects__intro::selection {
   color: yellow;
   background-color: blue;
 }
@@ -216,5 +227,26 @@ section {
           transform: rotate(60deg);
   position: absolute;
   top: 12.5rem;
+}
+
+.is-hidden.flower__background {
+  visibility: hidden;
+}
+
+.projects__overview h2 {
+  margin-bottom: 0.625rem;
+}
+
+details[open] {
+  padding-bottom: 0.3125rem;
+}
+
+details[open] summary {
+  background-color: yellow;
+  margin-bottom: 0.4375rem;
+}
+
+details[open] a {
+  display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Terminvereinbarung</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <img src="img/Bilder/Logo_bild.png" alt="Logo" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a id="active" href="terminvereinbarung.html"
+                >Terminvereinbarung</a
+              >
+            </li>
+            <li><a href="info.html">Info</a></li>
+            <li><a href="aktion.html">Aktion</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="terminvereinbarung">
+        <h2>Vereinbaren Sie einen Termin mit uns!</h2>
+
+        <div class="kontakt-img">
+          <div class="safari-wrap">
+            <img
+              src="img/Bilder/Bild_8.jpg"
+              alt="ein Brillenglas vergrößert Buchstaben."
+            />
+          </div>
+          <div class="safari-wrap">
+            <img
+              src="img/Bilder/Bild_5.jpg"
+              alt="eine Person lässt ihre Augen testen"
+            />
+          </div>
+          <div class="safari-wrap">
+            <img
+              src="img/Bilder/Bild_9.jpg"
+              alt="eine Kundin bekommt ihre Brille angepasst."
+            />
+          </div>
+        </div>
+        <div class="kontakt-formular">
+          <form action="#" autocomplete="on">
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="fname" />
+
+            <label for="lname">Vorname:</label>
+            <input type="text" id="lname" name="lname" />
+
+            <label for="email">E-mailadresse:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Telefon:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="01(5[1279]\d|6[023]|7\d)"
+            />
+
+            <label for="message">Ihre Nachricht:</label>
+
+            <textarea
+              id="message"
+              name="message"
+              rows="10"
+              cols="30"
+              maxlength="100"
+              placeholder="Ihr Anliegen in Kürze (Brille, Kontaktlinsen, optometrische Messung, usw.)"
+            ></textarea>
+            <div class="button-wrap">
+              <button type="submit">Abschicken</button>
+              <button type="reset">Zurücksetzen</button>
+            </div>
+          </form>
+        </div>
+
+        <p>Wir melden uns umgehend mit einem Terminvorschlag.</p>
+      </section>
+    </main>
+  </body>
+</html>

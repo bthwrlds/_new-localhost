@@ -1,0 +1,137 @@
+/* CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  color: blue;
+}
+
+/* hide ugly stuff */
+#logo,
+.mobile_only {
+  display: none;
+}
+
+.icon-wrap {
+  background-color: black;
+}
+
+.icon_wrap img {
+  width: 10px;
+}
+
+/* new styles start */
+
+body {
+  padding: 8px;
+  font-family: ui-sans-serif;
+}
+
+.change_div {
+  font-family: monospace;
+  text-align: end;
+}
+
+.change-button {
+  border: none;
+}
+
+.change-button:hover {
+  cursor: alias;
+}
+
+.change-button a {
+  background-color: yellow;
+  padding: 0;
+}
+
+#menu {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+#menu li {
+  border: 1px solid #4b2f89;
+  font-size: 1.2em;
+  padding: 1px;
+  padding-right: 6px;
+  padding-bottom: 0;
+  border-right-width: 4px;
+  border-bottom-width: 4px;
+}
+
+li.active {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+img {
+  width: 200px;
+}
+
+a {
+  padding: 5px;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 4em;
+  font-style: italic;
+  margin-bottom: 0.2em;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin-right: 220px;
+  column-count: 2;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #4b2f89;
+}
+
+::selection {
+  color: #4b2f89;
+}
+
+.image_wrap {
+  text-align: end;
+}
+
+.first_section_wrap,
+.section_wrap {
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: end;
+}
+
+@media screen and (max-width: 600px) {
+  .image_wrap {
+    display: block;
+  }
+
+  h2 {
+    font-size: 2.4em;
+  }
+
+  p {
+    font-size: 1em;
+    padding: 0;
+    font-size: large;
+    column-count: 1;
+  }
+
+  .cool_aside {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 62px;
+  }
+}
