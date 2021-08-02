@@ -197,6 +197,11 @@ section {
   }
 }
 
+.spacer {
+  height: 300px;
+  width: auto;
+}
+
 @-webkit-keyframes falling {
   0% {
     top: -20%;
@@ -254,7 +259,7 @@ section {
 }
 
 .projects__overview {
-  margin-top: 6.25rem;
+  margin-top: 7.5rem;
 }
 
 .projects__overview h2 {
@@ -276,5 +281,9 @@ details[open] summary {
 
 details[open] a {
   display: inline-block;
+}
+
+main#cv .text.cv__overview {
+  margin-top: 7.5rem;
 }
 /*# sourceMappingURL=style.css.map */

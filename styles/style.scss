@@ -204,7 +204,12 @@ main {
   }
 } 
 
-// styles projects.html___________________________________
+.spacer {
+  height: 300px;
+  width: auto;
+}
+
+// styles projects.html------------------------------------
 @keyframes falling {
   0% {top: -20%;}
   25% {top: 25%;}
@@ -236,7 +241,7 @@ main {
 }
 
 .projects__overview {
-  margin-top: pxtorem(100);
+  margin-top: pxtorem(120);
 }
 
 // text
@@ -260,6 +265,15 @@ details[open] {
     display: inline-block;
   }
 }
+
+// cv.html ------------------------------------
+
+main#cv {
+  .text.cv__overview {
+    margin-top: pxtorem(120);
+  }
+}
+
 
 
 
