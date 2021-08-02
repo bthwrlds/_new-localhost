@@ -197,46 +197,64 @@ section {
   }
 }
 
+@-webkit-keyframes falling {
+  0% {
+    top: -20%;
+  }
+  25% {
+    top: 25%;
+  }
+  50% {
+    bottom: 50%;
+  }
+  75% {
+    bottom: 25%;
+  }
+  100% {
+    bottom: -10%;
+  }
+}
+
+@keyframes falling {
+  0% {
+    top: -20%;
+  }
+  25% {
+    top: 25%;
+  }
+  50% {
+    bottom: 50%;
+  }
+  75% {
+    bottom: 25%;
+  }
+  100% {
+    bottom: -10%;
+  }
+}
+
 .flower__background {
-  margin-top: 6.25rem;
-  z-index: -2;
-  -webkit-animation: rotation 8s infinite linear;
-          animation: rotation 8s infinite linear;
-}
-
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(359deg);
-            transform: rotateY(359deg);
-  }
-}
-
-@keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(359deg);
-            transform: rotateY(359deg);
-  }
+  margin-top: 3.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .flower__background img {
-  height: 200px;
-  -webkit-transform: rotate(60deg);
-          transform: rotate(60deg);
-  position: absolute;
-  top: 12.5rem;
-  left: 0%;
+  height: 2.5rem;
+  -webkit-transform: rotate(61deg);
+          transform: rotate(61deg);
 }
 
 .is-hidden.flower__background {
   visibility: hidden;
+}
+
+.projects__overview {
+  margin-top: 6.25rem;
 }
 
 .projects__overview h2 {

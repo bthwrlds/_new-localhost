@@ -205,27 +205,27 @@ main {
 } 
 
 // styles projects.html___________________________________
+@keyframes falling {
+  0% {top: -20%;}
+  25% {top: 25%;}
+  50% {bottom: 50%;}
+  75% {bottom: 25%;}
+  100% {bottom: -10%;}
+}
+
 .flower__background {
-  margin-top: pxtorem(100);
-  z-index: -2;
-
-
-  animation: rotation 8s infinite linear;
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotateY(359deg);
-    }
-  }
+  margin-top: pxtorem(50);
+  display: flex;
+  justify-content: center;
 
   img {
-    height:200px;
-    transform: rotate(60deg);
-    position: absolute;
-    top: pxtorem(200);
-    left: 0%;
+    height: pxtorem(40);
+    transform: rotate(61deg);
+    // position: absolute;
+    // animation-name: falling;
+    // animation-duration: 8s;
+    // animation-iteration-count: infinite;
+    // animation-timing-function: linear;
     
   }
 }
@@ -233,6 +233,10 @@ main {
 // toggle flower background
 .is-hidden.flower__background {
   visibility: hidden;
+}
+
+.projects__overview {
+  margin-top: pxtorem(100);
 }
 
 // text
